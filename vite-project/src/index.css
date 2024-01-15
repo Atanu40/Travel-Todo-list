@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
+
+:root {
+  --font-family: "Monoton";
+  --page-width: 160rem;
+}
+
+body{
+  margin: 0px 0px;
+}
+
+.page-width {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
