@@ -1,0 +1,17 @@
+.list-content{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.remove-btn{
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 15px;
+}
+
+li{
+  font-family: inherit;
+  font-size: 15px;
+}

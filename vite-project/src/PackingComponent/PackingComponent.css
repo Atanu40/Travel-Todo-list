@@ -1,0 +1,18 @@
+.packing-list{
+  background-color: #5a3e2b;
+  color: #ffebb3;
+  /* position: relative;
+  top: -16px; */
+  min-height: 550px;
+}
+
+.packing-order{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-items: center;
+  margin: 0px;
+  padding-top: 25px;
+  padding-left: 0;
+}

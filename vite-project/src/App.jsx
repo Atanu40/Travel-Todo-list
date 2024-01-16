@@ -5,13 +5,36 @@ import './App.css'
 
 import Logo from './LogoComponent/LogoComponent.jsx'
 import Form from './FormComponent/FormComponent.jsx'
+import Packing from './PackingComponent/PackingComponent.jsx'
 
 function App() {
-  
+  const [item, setItem] = useState([]);
+
+  const addItem = (newItem) => {
+    setItem([...item, newItem]);
+  }
+
+  const removeItem = (id) => {
+    setItem(item.filter((item) => item.id !== id));
+  }
+
+  const toggleItem = (id) => {
+    setItem(item.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          packed: !item.packed,
+        };
+      }
+      return item;
+    }));
+  }
+
   return (
     <div className='body-content'>
       <Logo />
-      <Form />
+      <Form addItem={addItem}/>
+      <Packing item={item} onRemoveItem={removeItem} onToggleItem={toggleItem}/>
     </div>
   )
 }
