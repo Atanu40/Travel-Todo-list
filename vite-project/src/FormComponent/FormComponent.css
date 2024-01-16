@@ -78,4 +78,12 @@
     padding: 7px 20px;
     font-size: 16px;
   }
+
+  .input-form{
+    flex-direction: column;
+  }
+
+  .form-btn{
+    font-size: 16px;
+  }
 }

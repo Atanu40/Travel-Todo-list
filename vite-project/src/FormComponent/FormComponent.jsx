@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import '../FormComponent/FormComponent.css'
 
-function FormComponent() {
+function FormComponent(props) {
+
+  const{addItem} = props;
 
   const [quantity,setQuantity] = useState(1);
   const updateQuantity = (e) => {
@@ -21,7 +23,8 @@ function FormComponent() {
     }
 
     const newItem = { description, quantity, packed: false, id: Date.now() };
-
+    
+    addItem(newItem);
     setDescription('')
     setQuantity(1)
   }
