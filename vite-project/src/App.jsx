@@ -30,11 +30,16 @@ function App() {
     }));
   }
 
+  const ClearList = () => {
+    let alart = window.confirm("Are you sure to clear the list?");
+    alart && setItem([]);
+  }
+
   return (
     <div className='body-content'>
       <Logo />
       <Form addItem={addItem}/>
-      <Packing item={item} onRemoveItem={removeItem} onToggleItem={toggleItem}/>
+      <Packing item={item} onRemoveItem={removeItem} onToggleItem={toggleItem} onChange={ClearList}/>
     </div>
   )
 }
