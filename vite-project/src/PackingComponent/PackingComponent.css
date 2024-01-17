@@ -1,9 +1,7 @@
 .packing-list{
   background-color: #5a3e2b;
   color: #ffebb3;
-  /* position: relative;
-  top: -16px; */
-  min-height: 550px;
+  min-height: 440px;
 }
 
 .packing-order{
@@ -15,4 +13,36 @@
   margin: 0px;
   padding-top: 25px;
   padding-left: 0;
+}
+
+.cont-packing{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 440px;
+}
+
+.action{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.update{
+  background-color: #ffebb3;
+  font-family: inherit;
+  border: none;
+  border-radius: 10rem;
+  padding: 5px 10px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px){
+  .update{
+    font-size: 14px;
+  }
 }
