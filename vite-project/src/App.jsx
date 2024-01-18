@@ -6,6 +6,7 @@ import './App.css'
 import Logo from './LogoComponent/LogoComponent.jsx'
 import Form from './FormComponent/FormComponent.jsx'
 import Packing from './PackingComponent/PackingComponent.jsx'
+import Footer from './Footerstates/Footer.jsx'
 
 function App() {
   const [item, setItem] = useState([]);
@@ -40,6 +41,7 @@ function App() {
       <Logo />
       <Form addItem={addItem}/>
       <Packing item={item} onRemoveItem={removeItem} onToggleItem={toggleItem} onChange={ClearList}/>
+      <Footer item={item}/>
     </div>
   )
 }
