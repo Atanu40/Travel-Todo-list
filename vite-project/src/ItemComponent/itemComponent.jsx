@@ -3,7 +3,7 @@ import './itemComponent.css'
 function itemComponent(props) {
   const {item,onRemoveItem,onToggleItem} = props;
 
-  const [checkbox,setCheckbox] = useState("false")
+  
 
   const ondelete = () => {  
     onRemoveItem(item.id);
@@ -11,15 +11,15 @@ function itemComponent(props) {
 
   const ontoggle = (e) => {
     onToggleItem(item.id);
-    setCheckbox(e.target.value==="true"?"false":"true");
   }
 
-  console.log(checkbox);
+
 
   return (
     <div>
       <li className='list-content'>
-        <input type="checkbox" value={checkbox} onChange={ontoggle} />
+        <input type="checkbox" onChange={ontoggle} checked={item.packed ? true : false} />
+   
         <span style={item.packed ? { textDecoration: "line-through" } : {}}>{item.quantity} {item.description}</span>
         
         <button className='remove-btn' onClick={ondelete}>❌</button>

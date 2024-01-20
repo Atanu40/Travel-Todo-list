@@ -6,7 +6,7 @@ function Footer(props) {
   const { item } = props;
   let total = item.length;
   item.map((items,index) => items.packed ? count++ : count );
-  let percentage = (count/total)*100;
+  let percentage = parseInt((count/total)*100);
   console.log(percentage);
   return (
     <div className='footer-content'>
