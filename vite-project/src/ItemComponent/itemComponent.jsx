@@ -3,8 +3,6 @@ import './itemComponent.css'
 function itemComponent(props) {
   const {item,onRemoveItem,onToggleItem} = props;
 
-  
-
   const ondelete = () => {  
     onRemoveItem(item.id);
   }
@@ -12,7 +10,6 @@ function itemComponent(props) {
   const ontoggle = (e) => {
     onToggleItem(item.id);
   }
-
 
 
   return (
